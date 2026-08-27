@@ -28,16 +28,10 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
-
-  /* ── TYPOGRAPHY ── */
   .serif { font-family: 'Cormorant Garamond', serif; }
   h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; }
-
-  /* ── GRID ── */
   .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
   .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
-
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 20px 32px;
@@ -54,8 +48,6 @@
     transition: background 0.2s;
   }
   .nav-cta:hover { background: var(--gold-light); }
-
-  /* ── HERO ── */
   .hero {
     min-height: 100vh;
     display: flex; align-items: center;
@@ -127,8 +119,6 @@
     display: flex; align-items: center; gap: 12px;
   }
   .hero-scroll::after { content: ''; width: 1px; height: 60px; background: var(--gray2); }
-
-  /* ── PROVOCATION ── */
   .provocation {
     padding: 120px 32px;
     border-top: 1px solid rgba(184,144,74,0.1);
@@ -150,8 +140,6 @@
     margin-bottom: 20px;
   }
   .provocation p strong { color: var(--cream); font-weight: 400; }
-
-  /* ── FOR WHO ── */
   .forwho {
     padding: 100px 32px;
     background: var(--dark2);
@@ -176,8 +164,6 @@
   .forwho-icon { font-size: 11px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; }
   .forwho-item h3 { font-size: 22px; font-weight: 600; margin-bottom: 10px; color: var(--white); }
   .forwho-item p { font-size: 14px; color: var(--gray); line-height: 1.7; }
-
-  /* ── MODULES ── */
   .modules { padding: 120px 32px; }
   .modules-header { margin-bottom: 64px; }
   .modules-header h2 {
@@ -213,8 +199,6 @@
     padding: 3px 10px; border-radius: 1px; margin-top: 12px;
     text-transform: uppercase;
   }
-
-  /* ── AUTHOR ── */
   .author {
     padding: 100px 32px;
     background: var(--dark2);
@@ -236,8 +220,6 @@
   @media (max-width: 600px) {
     .author-inner { grid-template-columns: 1fr; gap: 32px; }
   }
-
-  /* ── PRICE ── */
   .pricing {
     padding: 120px 32px;
     text-align: center;
@@ -275,278 +257,4 @@
     width: 100%; padding: 18px;
     background: var(--gold); color: var(--dark);
     font-size: 15px; font-weight: 500; letter-spacing: 0.05em;
-    border: none; cursor: pointer; border-radius: 2px;
-    text-decoration: none; display: block; text-align: center;
-    transition: background 0.2s;
-    margin-bottom: 20px;
-  }
-  .pricing-cta:hover { background: var(--gold-light); }
-  .pricing-guarantee { font-size: 12px; color: var(--gray2); }
-  .pricing-after { margin-top: 24px; font-size: 13px; color: var(--gray2); }
-  .pricing-after strong { color: var(--gray); }
-
-  /* ── FAQ ── */
-  .faq { padding: 100px 32px; background: var(--dark2); border-top: 1px solid rgba(184,144,74,0.08); }
-  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); padding: 28px 0; max-width: 700px; margin: 0 auto; }
-  .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); margin-bottom: 12px; }
-  .faq-a { font-size: 15px; color: var(--gray); line-height: 1.8; }
-
-  /* ── FOOTER ── */
-  footer {
-    padding: 48px 32px;
-    border-top: 1px solid rgba(184,144,74,0.1);
-    text-align: center;
-  }
-  footer p { font-size: 13px; color: var(--gray2); }
-  footer a { color: var(--gold); text-decoration: none; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-inner > * { animation: fadeUp 0.8s ease both; }
-  .hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
-  .hero-inner > *:nth-child(2) { animation-delay: 0.2s; }
-  .hero-inner > *:nth-child(3) { animation-delay: 0.3s; }
-  .hero-inner > *:nth-child(4) { animation-delay: 0.4s; }
-  .hero-inner > *:nth-child(5) { animation-delay: 0.5s; }
-
-  @media (max-width: 640px) {
-    nav { padding: 16px 20px; }
-    .hero { padding: 100px 20px 60px; }
-    .container, .container-wide { padding: 0 20px; }
-    .provocation, .modules, .pricing, .faq { padding: 80px 20px; }
-    .forwho, .author { padding: 80px 20px; }
-    .pricing-card { padding: 48px 28px; }
-    .author-inner { gap: 32px; }
-    .module-item { grid-template-columns: 56px 1fr; }
-    .module-num { font-size: 36px; }
-  }
-</style>
-</head>
-<body>
-
-<nav>
-  <span class="nav-logo">Comunicação que (Des)vela</span>
-  <a href="https://pay.kiwify.com.br/GSJqIBe" class="nav-cta">Garantir vaga — R$297</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Marcus Vinicius Leite</div>
-    <h1 class="hero-title">Comunicação que</h1>
-    <span class="hero-title-gold">(Des)vela</span>
-    <p class="hero-sub">
-      Psicanálise aplicada ao marketing de verdade.<br>
-      <strong>Não é mais uma técnica. É entender o que está travando a sua comunicação por baixo.</strong>
-    </p>
-    <div class="hero-cta-group">
-      <a href="https://pay.kiwify.com.br/GSJqIBe" class="btn-primary">Quero o curso — R$297</a>
-      <div class="hero-price">
-        Oferta de Founders · depois <strong>R$497</strong>
-      </div>
-    </div>
-    <div class="hero-scroll">Scroll</div>
-  </div>
-</section>
-
-<!-- PROVOCATION -->
-<section class="provocation">
-  <div class="provocation-inner">
-    <blockquote>
-      "Você não tem problema de técnica. Você tem problema de sujeito."
-    </blockquote>
-    <p>
-      Todo mundo já aprendeu o suficiente sobre consistência, funil, copy e gatilho mental.
-      E ainda assim sente que a comunicação não soa verdadeira. Que falta algo que
-      <strong>nenhum curso de marketing consegue nomear.</strong>
-    </p>
-    <p>
-      Essa coisa tem nome. A psicanálise chama de sintoma — um padrão que se repete
-      porque ainda não foi escutado. E o seu padrão comunicacional tem um sintoma.
-    </p>
-    <p>
-      Este curso foi construído para que você consiga, finalmente, <strong>ler esse sintoma
-      e criar a partir de um lugar verdadeiro</strong> — não de uma fórmula.
-    </p>
-  </div>
-</section>
-
-<!-- FOR WHO -->
-<section class="forwho">
-  <div class="container-wide">
-    <div class="section-label">Para quem é</div>
-    <div class="forwho-grid">
-      <div class="forwho-item">
-        <div class="forwho-icon">01</div>
-        <h3>Criadores de conteúdo</h3>
-        <p>Que postam consistentemente mas sentem que algo não conecta de verdade.</p>
-      </div>
-      <div class="forwho-item">
-        <div class="forwho-icon">02</div>
-        <h3>Psicólogos e terapeutas</h3>
-        <p>Que querem comunicar o valor do seu trabalho sem soar como marketing genérico.</p>
-      </div>
-      <div class="forwho-item">
-        <div class="forwho-icon">03</div>
-        <h3>Coaches e consultores</h3>
-        <p>Que dominam a prática mas travam na hora de se comunicar com autenticidade.</p>
-      </div>
-      <div class="forwho-item">
-        <div class="forwho-icon">04</div>
-        <h3>Empreendedores</h3>
-        <p>Desconfortáveis com marketing agressivo e que buscam uma alternativa ética.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODULES -->
-<section class="modules">
-  <div class="container">
-    <div class="modules-header">
-      <h2>7 módulos em <em>apostila</em></h2>
-      <p>Conceitos, exemplos práticos e exercícios para aplicar imediatamente.</p>
-    </div>
-    <div class="module-list">
-      <div class="module-item">
-        <div class="module-num">1</div>
-        <div class="module-content">
-          <h3>O Sintoma da Comunicação</h3>
-          <p>Por que você repete os mesmos padrões que não funcionam — e o que o sintoma comunicacional está tentando dizer.</p>
-          <span class="module-tag">Diagnóstico</span>
-        </div>
-      </div>
-      <div class="module-item">
-        <div class="module-num">2</div>
-        <div class="module-content">
-          <h3>Desejo, Gozo e Persona</h3>
-          <p>A diferença entre criar por desejo e criar por compulsão. E o que a sua persona está escondendo do seu sujeito real.</p>
-          <span class="module-tag">Autoconhecimento</span>
-        </div>
-      </div>
-      <div class="module-item">
-        <div class="module-num">3</div>
-        <div class="module-content">
-          <h3>Escuta como Estratégia</h3>
-          <p>Como ouvir o público de verdade — não para confirmar o que você já sabe, mas para ser surpreendido pelo que ele tem a dizer.</p>
-          <span class="module-tag">Prática</span>
-        </div>
-      </div>
-      <div class="module-item">
-        <div class="module-num">4</div>
-        <div class="module-content">
-          <h3>O Inconsciente do Conteúdo</h3>
-          <p>Procrastinação, perfeccionismo e bloqueio criativo vistos como o que são: sintomas, não fraquezas.</p>
-          <span class="module-tag">Desbloqueio</span>
-        </div>
-      </div>
-      <div class="module-item">
-        <div class="module-num">5</div>
-        <div class="module-content">
-          <h3>Engajamento ou Enlaçamento?</h3>
-          <p>A diferença entre uma métrica e um vínculo. E por que comunicação ética não é menos eficaz — é mais duradoura.</p>
-          <span class="module-tag">Ética</span>
-        </div>
-      </div>
-      <div class="module-item">
-        <div class="module-num">6</div>
-        <div class="module-content">
-          <h3>Prática com Transferência</h3>
-          <p>Laboratório integrado: exercícios que vão te desconfortar do jeito certo e produzir conteúdo de um lugar diferente.</p>
-          <span class="module-tag">Laboratório</span>
-        </div>
-      </div>
-      <div class="module-item">
-        <div class="module-num">7</div>
-        <div class="module-content">
-          <h3>Comunicação com Verdade</h3>
-          <p>Como sustentar uma comunicação real ao longo do tempo — e como lidar com crítica, silêncio e sucesso.</p>
-          <span class="module-tag">Integração</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AUTHOR -->
-<section class="author">
-  <div class="author-inner">
-    <div>
-      <p class="author-name">Marcus Vinicius Leite</p>
-      <p class="author-role">PSICANALISTA · ESCRITOR · COMUNICADOR</p>
-      <div class="author-line"></div>
-    </div>
-    <div>
-      <p>Há mais de <strong>10 anos no podcast Pensatas Curtas</strong>, conversando sobre psicanálise, linguagem e o que move as pessoas.</p>
-      <p>Psicanalista de formação, escritor e comunicador que passou anos observando a intersecção entre o inconsciente e a forma como nos apresentamos ao mundo.</p>
-      <p>Este curso nasceu da incômoda percepção de que <strong>a maioria dos problemas de comunicação não são técnicos — são subjetivos.</strong> E que a psicanálise tem muito a dizer sobre isso.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing">
-  <div class="container">
-    <div class="section-label" style="justify-content: center; margin-bottom: 56px;">Investimento</div>
-    <div class="pricing-card">
-      <p class="pricing-label">7 módulos em apostila · acesso imediato</p>
-      <div class="pricing-price"><sup>R$</sup>297</div>
-      <p class="pricing-period">pagamento único · ou 12x de R$29,70</p>
-      <ul class="pricing-includes">
-        <li>7 apostilas completas em PDF</li>
-        <li>Conceitos psicanalíticos aplicados</li>
-        <li>Exercícios práticos por módulo</li>
-        <li>Glossário psicanalítico aplicado</li>
-        <li>Curadoria de leituras recomendadas</li>
-        <li>Acesso vitalício ao conteúdo</li>
-      </ul>
-      <a href="https://pay.kiwify.com.br/GSJqIBe" class="pricing-cta">Quero o curso agora</a>
-      <p class="pricing-guarantee">Garantia de 15 dias · se não gostar, devolvemos 100%</p>
-      <p class="pricing-after">Após as primeiras 30 vagas, o preço sobe para <strong>R$497</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="container">
-    <div class="section-label">Perguntas frequentes</div>
-    <div class="faq-item">
-      <p class="faq-q">Preciso ter base em psicanálise para fazer o curso?</p>
-      <p class="faq-a">Não. O curso foi construído para ser acessível — os conceitos psicanalíticos são explicados com exemplos práticos do cotidiano da comunicação digital. Você não precisa ter lido Freud ou Lacan.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">O curso é ao vivo ou gravado?</p>
-      <p class="faq-a">O curso é em apostilas — material em PDF que você acessa no seu próprio ritmo, quando e onde quiser. Sem horário fixo, sem prazo para concluir.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">Para que tipo de comunicação serve?</p>
-      <p class="faq-a">Para qualquer comunicação pública: redes sociais, e-mail marketing, palestras, conteúdo escrito ou falado. Os princípios são universais — o que muda é o sujeito que comunica.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-q">E se eu não gostar?</p>
-      <p class="faq-a">Você tem 15 dias de garantia incondicional. Se por qualquer motivo não se sentir satisfeito, é só pedir o reembolso e devolvemos 100% do valor.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section style="padding: 100px 32px; text-align: center; border-top: 1px solid rgba(184,144,74,0.1);">
-  <div class="container">
-    <p style="font-size: 11px; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 32px;">UMA ÚLTIMA COISA</p>
-    <h2 style="font-size: clamp(32px, 5vw, 52px); font-weight: 300; color: var(--white); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">
-      Comunicar com verdade não é comunicar <em>sem estratégia</em>.
-    </h2>
-    <p style="font-size: 17px; color: var(--gray); max-width: 480px; margin: 0 auto 48px; line-height: 1.8;">
-      É comunicar onde a estratégia serve à verdade — e não o contrário.
-    </p>
-    <a href="https://pay.kiwify.com.br/GSJqIBe" class="btn-primary">Garantir minha vaga — R$297</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Marcus Vinicius Leite · <a href="mailto:marcusvinleite@gmail.com">marcusvinleite@gmail.com</a> · <a href="https://instagram.com/marcus.leite1">@marcus.leite1</a></p>
-</footer>
-
-</body>
-</html>
+    border: none; cursor: pointer;
